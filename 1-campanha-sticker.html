@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bora!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#fff3e0;--peach:#ffd9c2;--coral:#ff6f5e;--red:#e63946;--ink:#1a1208;--blue:#3b82f6;--green:#22c55e}
+html,body{height:100%}
+body{background:var(--cream);color:var(--ink);font-family:'Bricolage Grotesque',sans-serif;font-weight:500;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:'';position:fixed;width:480px;height:480px;background:radial-gradient(circle,var(--peach),transparent 70%);top:-200px;right:-100px;z-index:0;pointer-events:none}
+body::after{content:'';position:fixed;width:380px;height:380px;background:radial-gradient(circle,rgba(255,111,94,0.25),transparent 70%);bottom:-180px;left:-120px;z-index:0;pointer-events:none}
+.stage{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;z-index:1}
+.card{position:relative;max-width:480px;width:100%;background:#fff;border:3px solid var(--ink);border-radius:24px;padding:40px 32px;box-shadow:8px 8px 0 0 var(--ink);transform:rotate(-1deg)}
+.sticker{position:absolute;display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;border:2.5px solid var(--ink);font-size:28px;background:#fff;box-shadow:3px 3px 0 0 var(--ink)}
+.sticker-1{top:-20px;left:-20px;background:var(--coral);transform:rotate(-12deg)}
+.sticker-2{top:40px;right:-28px;background:var(--blue);color:#fff;transform:rotate(15deg)}
+.sticker-3{bottom:120px;left:-32px;background:var(--green);color:#fff;transform:rotate(-8deg)}
+.tag{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:var(--ink);color:var(--cream);border-radius:100px;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:24px}
+.tag::before{content:'';width:8px;height:8px;background:var(--green);border-radius:50%;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.headline{font-size:clamp(40px,8vw,60px);font-weight:800;line-height:0.95;letter-spacing:-0.025em;margin-bottom:14px}
+.headline-accent{color:var(--red);position:relative;display:inline-block}
+.headline-accent::after{content:'';position:absolute;bottom:0;left:-4px;right:-4px;height:30%;background:rgba(255,217,194,0.7);z-index:-1}
+.handwrite{font-family:'Caveat',cursive;font-size:24px;color:var(--coral);font-weight:700;display:inline-block;transform:rotate(-2deg);margin-bottom:24px}
+.lead{font-size:17px;line-height:1.55;color:var(--ink);margin-bottom:28px;font-weight:500}
+.perks{display:grid;gap:10px;margin-bottom:32px}
+.perk{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--cream);border:2px solid var(--ink);border-radius:14px;font-size:14px;font-weight:500;transition:transform 0.15s ease}
+.perk:hover{transform:translateX(4px)}
+.perk-emoji{font-size:22px}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:18px;background:var(--red);color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:800;letter-spacing:0.02em;text-transform:uppercase;border:3px solid var(--ink);border-radius:16px;text-decoration:none;box-shadow:5px 5px 0 0 var(--ink);transition:all 0.15s cubic-bezier(0.22,1,0.36,1);cursor:pointer}
+.cta:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 0 var(--ink)}
+.cta:active{transform:translate(2px,2px);box-shadow:2px 2px 0 0 var(--ink)}
+.foot{text-align:center;margin-top:18px;font-size:12px;color:var(--ink);opacity:0.6;font-weight:500}
+@media (max-width:480px){.card{padding:32px 22px;transform:none}.sticker-1{top:-16px;left:-16px;width:54px;height:54px;font-size:24px}.sticker-2{right:-20px;width:54px;height:54px;font-size:24px}.sticker-3{display:none}}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="card">
+    <div class="sticker sticker-1">🔥</div>
+    <div class="sticker sticker-2">⚡</div>
+    <div class="sticker sticker-3">✨</div>
+    <span class="tag">Acesso Liberado</span>
+    <h1 class="headline">Bora <span class="headline-accent">entrar</span> aí?</h1>
+    <p class="handwrite">tô te esperando 👋</p>
+    <p class="lead">Um clique no botão e você já tá dentro. Direto pelo Telegram, sem cadastro chato, sem firula.</p>
+    <div class="perks">
+      <div class="perk"><span class="perk-emoji">⚡</span><span>Acesso instantâneo, sem espera</span></div>
+      <div class="perk"><span class="perk-emoji">🔒</span><span>Conteúdo só pra quem tá aqui</span></div>
+      <div class="perk"><span class="perk-emoji">📲</span><span>Atualizações direto no chat</span></div>
+    </div>
+    <a href="https://phantoms.group/l/3255c4a7?shk=s3tnljdw" class="cta button">Quero entrar agora →</a>
+    <p class="foot">você será redirecionado pro Telegram</p>
+  </div>
+</div>
+<script>
+(function() {
+  var u = new URLSearchParams(window.location.search);
+  var KEYS = [
+    'utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id',
+    'fbclid','ttclid','gclid','_fbp',
+    'tsclid',
+    'click_id','kwai_click_id','kwclid','callback',
+    'src','sck','xcod','cv','shk','ph','_bp','_sp',
+    'salesCode','codigo_de_vendas'
+  ];
+  var captured = {};
+  KEYS.forEach(function(k){ var v = u.get(k); if (v) captured[k] = v; });
+  try {
+    var saved = JSON.parse(sessionStorage.getItem('shark_utms') || '{}');
+    Object.keys(captured).forEach(function(k){ saved[k] = captured[k]; });
+    sessionStorage.setItem('shark_utms', JSON.stringify(saved));
+    captured = saved;
+  } catch(e) {}
+  function buildLink(originalHref) {
+    var url = new URL(originalHref, location.origin);
+    Object.keys(captured).forEach(function(k){
+      if (!url.searchParams.has(k)) url.searchParams.set(k, captured[k]);
+    });
+    return url.toString();
+  }
+  // Reescreve no load, nao no clique. Botao do meio dispara auxclick e "abrir em
+  // nova aba" pelo menu de contexto nem chega a disparar evento: com a reescrita
+  // presa ao clique, essas aberturas levavam a URL sem parametro nenhum.
+  function attach() {
+    document.querySelectorAll('a.button, a.cta, a[href*="/l/"], a[href*="/c/"], a[href*="/b/"]').forEach(function(btn){
+      try { btn.href = buildLink(btn.href); } catch(err) {}
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attach);
+  } else {
+    attach();
+  }
+  // Botao inserido depois do load tambem precisa nascer decorado.
+  try {
+    new MutationObserver(attach).observe(document.documentElement, { childList: true, subtree: true });
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>
